@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJR Festival - Ticket Booking</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            background: #101010;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .booking-container {
+            width: 100%;
+            max-width: 500px;
+            background: #1c1c1c;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h2 {
+            color: orange;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #ccc;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #555;
+            border-radius: 6px;
+            background: #292929;
+            color: white;
+        }
+
+        .total {
+            margin-top: 20px;
+            padding: 15px;
+            background: #292929;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 20px;
+            color: orange;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 13px;
+            border: none;
+            border-radius: 6px;
+            background: orange;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ffbd45;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: orange;
+            text-decoration: none;
+        }
+
+        #bookingMessage {
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="booking-container">
+
+        <h2>MJR Music Festival 2026</h2>
+        <p class="subtitle">Book Your Tickets</p>
+
+        <form id="bookingForm">
+
+            <label for="ticketType">Select Ticket Type</label>
+            <select id="ticketType" required>
+                <option value="early">Early Bird - ₹999</option>
+                <option value="standard">Standard - ₹1,499</option>
+            </select>
+
+            <label for="quantity">Number of Tickets</label>
+            <input type="number" id="quantity" min="1" max="10" value="1" required>
+
+            <label for="customerName">Customer Name</label>
+            <input type="text" id="customerName" placeholder="Enter your name" required>
+
+            <label for="customerEmail">Email Address</label>
+            <input type="email" id="customerEmail" placeholder="Enter your email" required>
+
+            <div class="total">
+                Total Amount: ₹<span id="totalAmount">999</span>
+            </div>
+
+            <button type="submit">Confirm Booking</button>
+
+        </form>
+
+        <div id="bookingMessage"></div>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+    </div>
+
+    <script src="booking.js"></script>
+
+</body>
+</html>

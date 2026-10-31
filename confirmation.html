@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJR - Booking Confirmation</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            background: #101010;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .confirmation-container {
+            width: 100%;
+            max-width: 500px;
+            padding: 30px;
+            background: #1c1c1c;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .success {
+            color: lightgreen;
+            font-size: 22px;
+        }
+
+        h2 {
+            color: orange;
+        }
+
+        .ticket-details {
+            margin-top: 25px;
+            padding: 20px;
+            background: #292929;
+            border-radius: 8px;
+            text-align: left;
+            line-height: 1.8;
+            overflow-wrap: anywhere;
+        }
+
+        .ticket-details strong {
+            color: orange;
+        }
+
+        #qrcode {
+            margin: 25px auto;
+            padding: 15px;
+            background: white;
+            width: fit-content;
+            border-radius: 8px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 12px;
+            border: none;
+            border-radius: 6px;
+            background: orange;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ffbd45;
+        }
+
+        a {
+            display: block;
+            margin-top: 18px;
+            color: orange;
+            text-decoration: none;
+        }
+
+        @media (max-width: 480px) {
+            .confirmation-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="confirmation-container">
+
+        <div class="success">✓ Booking Successful!</div>
+
+        <h2>MJR Music Festival 2026</h2>
+
+        <p>Your ticket booking has been confirmed.</p>
+
+        <div class="ticket-details">
+
+            <p><strong>Booking ID:</strong> <span id="bookingId"></span></p>
+            <p><strong>Name:</strong> <span id="customerName"></span></p>
+            <p><strong>Email:</strong> <span id="customerEmail"></span></p>
+            <p><strong>Ticket:</strong> <span id="ticketType"></span></p>
+            <p><strong>Quantity:</strong> <span id="quantity"></span></p>
+            <p><strong>Total:</strong> ₹<span id="total"></span></p>
+            <p><strong>Booking Date:</strong> <span id="bookingDate"></span></p>
+
+        </div>
+
+        <h3>Your Digital Ticket QR Code</h3>
+
+        <div id="qrcode"></div>
+
+        <button onclick="window.print()">Download / Print Ticket</button>
+
+        <a href="index.html">Back to Home</a>
+        <a href="my-bookings.html">View My Bookings</a>
+
+    </div>
+
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script src="confirmation.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJR - My Bookings</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            background: #101010;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: orange;
+        }
+
+        .user-info {
+            text-align: center;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        .booking-card {
+            background: #1c1c1c;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border-left: 4px solid orange;
+            overflow-wrap: anywhere;
+        }
+
+        .booking-card h3 {
+            color: orange;
+        }
+
+        .booking-card p {
+            line-height: 1.7;
+        }
+
+        .view-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background: orange;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .empty {
+            text-align: center;
+            color: #ccc;
+            padding: 30px;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            color: orange;
+            text-decoration: none;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>My Bookings</h2>
+
+        <p class="user-info">
+            Welcome, <span id="userName"></span>
+        </p>
+
+        <div id="bookingList"></div>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+    </div>
+
+    <script src="my-bookings.js"></script>
+
+</body>
+</html>
